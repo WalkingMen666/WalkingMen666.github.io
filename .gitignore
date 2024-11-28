@@ -1,1 +1,7 @@
+# file existed before #
+#######################
 test.html
+
+# Using wildcards #
+###################
+*.zip
