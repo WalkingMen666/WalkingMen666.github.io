@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Tetris-like Game with Canvas</title>
+</head>
+<body>
+    <div id="instruction-modal" class="modal">
+        <div class="modal-content">
+            <h2>Game Instructions</h2>
+            <p><strong>Keyboard Controls:</strong></p>
+            <ul>
+                <li><strong>Arrow Left (←):</strong> Move left</li>
+                <li><strong>Arrow Right (→):</strong> Move right</li>
+                <li><strong>Arrow Up (↑):</strong> Rotate piece</li>
+                <li><strong>Arrow Down (↓):</strong> Soft drop</li>
+                <li><strong>Space:</strong> Hard drop</li>
+            </ul>
+            <p><strong>Score Calculation:</strong></p>
+            <ul>
+                <li>1 line cleared = 1 point</li>
+                <li>2 lines cleared = 4 points</li>
+                <li>3 lines cleared = 9 points</li>
+                <li>4 lines cleared = 16 points</li>
+            </ul>
+            <button id="close-modal" class="game-button">Got it!</button>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div id="scoreBoard">Score: 0</div>
+        
+        <div class="game-layout">
+            <canvas id="gameCanvas" width="300" height="600"></canvas>
+            
+            <div class="side-controls">
+                <button class="game-button" id="increase-speed" style="transform: rotate(-90deg)" title="speed up">
+                    <i class="fa-solid fa-forward"></i>
+                </button>
+                <button class="game-button" id="decrease-speed" style="transform: rotate(-90deg)" title="speed down">
+                    <i class="fa-solid fa-backward"></i>
+                </button>
+                <button class="game-button" id="drop-to-bottom" style="transform: rotate(-90deg);" title="drop">
+                    <i class="fa-solid fa-left-long"></i>
+                </button>
+            </div>
+        </div>
+    
+        <div class="button-container">
+            <button class="game-button" id="start-button" title="start"><i class="fa-solid fa-play"></i></button>
+            <button class="game-button" id="left-button" title="go left"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="game-button" id="right-button" title="go right"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="game-button" id="rotate-button" title="rotate"><i class="fa-solid fa-rotate-right"></i></button>
+            <button class="game-button" id="reset-button" title="reset"><i class="fa-solid fa-rotate"></i></button>
+            <button class="game-button" id="pause-button" title="pause"><i class="fa-solid fa-pause"></i></button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
